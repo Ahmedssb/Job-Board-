@@ -1,0 +1,215 @@
+body{
+  overflow-x: hidden; /*--right gutter fix--*/
+      font-family: sans-serif;
+      color:#373432; 
+            background-color: #f8f9fa!important;
+  
+  }
+  .custom-nav{
+      background-color:#fff ;
+      border-top: 1px solid #B5B8B6 ;
+       border-bottom: 1px solid #fff ;
+     
+  }
+   
+      
+  /*---  Landing Page  --*/
+  .landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    background: #fff;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    position: fixed;
+    display: table; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+    will-change: transform;
+   background-image: url('../images/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg')   ;
+    filter: brightness(70%);
+  }
+   
+  .caption{
+      width: 100%;
+      max-width: 100%;
+      position: absolute;
+      top: 40%;
+       z-index: 1;
+      text-align: center;
+   }
+  .caption h3{
+      color:#2784fc;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      padding-bottom: 2rem;
+   
+  }
+  .caption table {
+      background-color: #fff;
+      margin: 50px 0  ;
+  }
+  .caption table td{
+      height: 50px;
+      width: 30%;
+   }
+  
+  .caption button{
+      padding:15px 50px;
+      background-color: #2784fc;
+  }
+  .caption button{
+      padding:15px 30px;
+      background-color: #2784fc;
+      transition: all 0.5s;
+   width: 200px;
+      border: none;
+        font-size: 28px;
+  }
+  .caption button:hover{
+       background-color: #2784fc;
+       padding-right: 24px;
+    padding-left:8px;
+  }
+  .caption button:after {
+    content: '»';
+    position: relative;
+    opacity: 0;  
+    top: -4px;
+    left: 50px;
+    transition: 0.5s;
+  }
+  .caption button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .caption table input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+  }
+  
+  .f-row h3{
+      margin: 50px 0;
+  }
+  
+  .middle-title{
+      margin: 50px 0px;
+      color: #2784fc;
+      text-transform: uppercase;
+  }
+  
+  .job-card{
+       width: 50%;
+      height: 100%;
+      max-height: 100%;
+      margin-bottom: 30px;
+      background-color: #fff;
+   
+  }
+  .job-card:hover{
+     border-bottom: 2px solid #DCDCDC;
+     border-top: 2px solid #DCDCDC;
+  
+  }
+  .jobs-title{
+      margin: 70px 0px;
+      color: #2784fc;
+      text-transform: uppercase;
+  }
+  .job-card span{
+      margin-bottom: 10px;
+      color: #2784fc;
+  }
+  
+  .job-location{
+      width: 50%;
+  }
+  .job-type{
+      width: 50%;
+      float: right;
+  }
+  .view-btn {
+      background-color: #2784fc;    
+      color: #fff;
+      padding: 5px 10px;
+      margin-bottom: 50px;
+       box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    transition: all 0.5s;
+   width: 220px;
+      border: none;
+        font-size: 30px;
+  
+  }
+  .view-btn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .view-btn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 5px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .view-btn:hover{
+       padding-right: 24px;
+    padding-left:8px;
+  }
+  .view-btn:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .footer .row{
+      background-color:#242424;
+       padding: 3rem 2rem;
+      color:#fff; 
+   }
+  .footer p{
+      color:  #8A8A8C;
+  }
+  .footer h4{
+      margin-bottom: 30px;
+  }
+  .footer input,textarea{
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px 40px;
+      color:  #8A8A8C;
+  }
+  .footer textarea{
+          padding: 10px 50px;
+             margin-bottom: 10px;
+  
+  }
+  .footer .no-padding {
+  padding: 0;
+    
+  }
+  .footer button{
+        padding: 5px 100px;
+       margin-bottom: 0;
+      background-color: #2784fc;
+      border: none;
+      color: #fff;
+  }
