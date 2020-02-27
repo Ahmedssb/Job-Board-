@@ -18,6 +18,10 @@ class Job extends Model
         'user_id',
         'cat_id',
         'cont_id',
-       
+       'vacancies_num',
+       'salary',
     ];
+
+
+   
 }

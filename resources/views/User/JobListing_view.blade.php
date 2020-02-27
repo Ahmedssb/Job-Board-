@@ -28,43 +28,31 @@
 <div id="jobs">
     <div class="container-fluid justify-content-center" style=" text-align: center;padding:0 3%">
         <h3 class="page-title">Information Jobs in Saudi</h3>
-     <div class="row justify-content-center">
+     <div class="row justify-content-center" id="job_container">
          
               <!-- sart filter section -->
-         <div class="col-md-4  "  style="background-color: #fff" >
+         <div class="col-md-3  "  style="background-color: #fff" >
              
                  <!-- location filter -->
                    <div class="filter-type"   >
 
                       <div class="col-auto my-1">
-                          <label class="mr-sm-2" for="inlineFormCustomSelect">country</label>
-                          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>Choose...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                          <label class="mr-sm-2" for="inlineFormCustomSelect">By Country</label>
                       </div>
 
                        <div>
-                           <ul>
-                               <a  href="#"><li>Saudi Arabia</li></a>
-                               <a  href="#"><li>Kuwait</li></a>
-                               <a  href="#"><li>UAE</li></a>
-                               <a  href="#"><li>Oman</li></a>
-                               <a  href="#"><li>Jordan</li></a>
-                               <a  href="#"><li>Baharin</li></a>
-                               <span id="loc-dots">...</span><span id="loc-more" class="more">
-                               <a  href="#"><li>Saudi Arabia</li></a>
-                               <a  href="#"><li>Kuwait</li></a>
-                               <a  href="#"><li>UAE</li></a>
-                               <a  href="#"><li>Oman</li></a>
-                               <a  href="#"><li>Jordan</li></a>
-                               <a  href="#"><li>Baharin</li></a>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="f1all" value="f1allf1"  > All</a>
+   
+                                 @foreach($countries_g1 as $cont1)
+                                 <a  href="#" ><input type="checkbox" class="cont_list" name="cont_list[]" value="{{'f1'.$cont1->id}}" id="{{'f'.$cont1->id}}">{{$cont1->country_name}}</a>
+                                 @endforeach
+                                 <span id="loc-dots">...</span><span id="loc-more" class="more">
+                                 @foreach($countries_g2 as $cont2)
+                                <a  href="#" ><input type="checkbox" value="{{'f1'.$cont2->id}}" class="cont_list" name="cont_list[]"  id="{{'f1'.$cont2->id}}"  >{{$cont2->country_name}}</a>
+                                @endforeach
                                </span>
                                <button onclick="showMore('loc-dots','loc-more','loc-btn')"  id="loc-btn" class="more-btn">Show more</button>
-                           </ul>
-                       </div>
+                        </div>
 
                     </div>
              <!-- end location filter -->
@@ -73,49 +61,43 @@
                    <div class="filter-type" >
 
                       <div class="col-auto my-1">
-                          <label class="mr-sm-2" for="inlineFormCustomSelect">Category</label>
-                          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>Information Techonolgy</option>
-                            <option value="1">Adminstration</option>
-                            <option value="2">Sales</option>
-                            <option value="3">Engneering</option>
-                          </select>
+                          <label class="mr-sm-2" for="inlineFormCustomSelect">By Category</label>
+                         
                       </div>
 
                        <div>
-                           <ul>
-                               <a  href="#"><li>Accounting and Auditing</li></a>
-                               <a  href="#"><li>Managment</li></a>
-                               <a  href="#"><li>Teaching and Acadmics</li></a>
-                               <a  href="#"><li>Consulting</li></a>
-                               <a  href="#"><li>Safety</li></a>
-                               <a  href="#"><li>Finance</li></a>
+                       <a  href="#"><input type="checkbox" class="cont_list" id="f2all" value="f2allf2" checked> All</a>
+                           @foreach($categories_g1 as $cat1)
+                                <a  href="#"><input type="checkbox" class="cont_list" id="{{'f2'.$cat1->id}}" value="{{'f2'.$cat1->id}}"  > {{$cat1->name}}</a>
+                          @endforeach
                                <span id="cat-dots">...</span><span id="cat-more"  class="more">
-                               <a  href="#"><li>Managment</li></a>
-                               <a  href="#"><li>Teaching and Acadmics</li></a>
-                               <a  href="#"><li>Consulting</li></a>
-                               <a  href="#"><li>Safety</li></a>
+                          @foreach($categories_g2 as $cat2)
+                                     <a  href="#"><input type="checkbox" class="cont_list" id="{{'f2'.$cat2->id}}" value="{{'f2'.$cat2->id}}" > {{$cat2->name}}</a>
+                          @endforeach
                                </span>
                                <button onclick="showMore('cat-dots','cat-more','cat-more-btn')" id="cat-more-btn" class="more-btn">Show more</button>
 
-                           </ul>
-                       </div>
+                        </div>
 
                     </div>
              <!-- end category filter -->
 
                   <!-- type filter -->
-                   <div class="filter-type" >
+                   <div class="filter-type"  style="overflow: hidden">
 
-                      <div class="col-auto my-1">
-                          <label class="mr-sm-2" for="inlineFormCustomSelect">Type</label>
-                          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>Choose...</option>
-                            <option value="1">Full time</option>
-                            <option value="2">Part Time</option>
-                            <option value="2">Conract</option>
-                           </select>
+                   <div class="col-auto my-1">
+                          <label class="mr-sm-2" for="inlineFormCustomSelect">By Type</label>
+                         
                       </div>
+
+                      <div>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="f3all" value="f3allf3" checked > All</a>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="full" value="f3Full Time"  > Full Time</a>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="pat" value="f3Part Time"  > Part Time</a>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="contract" value="f3Contract"  > Contract</a>
+                                <a  href="#"><input type="checkbox" class="cont_list" id="interenship" value="f3Internship"  > Internship</a>
+
+                        </div>
 
                   </div>
              <!-- end type filter -->
@@ -124,10 +106,11 @@
          <!-- end filter section -->
          
          <!-- sart job listin -->
-         <div class="col-md-8 ">
+      
+          <div class="col-md-8 " id="job_listing">
                @foreach($jobs as $job)
-                <div class="job-container"  style="background-color:#fff">
-                        <h4>{{$job->title}}</h4> <button><a href="#">Details</a></button>
+                <div class="job-frame job-details"  style="background-color:#fff">
+                        <h4 id="f_job_title">{{$job->title}}</h4>  <button id="{{$job->id}}" onclick="showInfo({{$job->id}})" value="{{$job->id}}" class="job-frame-btn" ><a href="#">Details</a></button>
                        <h6>{{$job->c_name}} <span>{{$job->created_at}}</span></h6>
                        <p>
                        {{$job->des}}                       </p>
@@ -139,9 +122,60 @@
                  
          </div>
          <!--end job listing -->
-    
+             <!-- sart job details -->
+    <div class="col-md-4  details-div"  id="job_info" >   
+            <div class=" job-container job-details"  style="background-color:#fff">
+                       <div class="details-div1">
+                            <button  class="div1-btn1" ><span onclick="hideInfo()" id="close_btn"  aria-hidden="true">×</span></button>
+                             <h5 id="job_title">Web developer</h5>
+                           <h6 id="job_company">Company name <span id="job_date">12/2019</span></h6>
+                           <button class="div1-btn2"  >Apply</button>
+                      </div>   
+                       <div class="details-div2" >
+                         <h6>Job Description </h6>
+                           <p id="job_description">
+                              We are seeking a .NET developer responsible for building/maintaining .NET applications using ASP.Net, VB.net, jQuery and Web Services. Your primary responsibility will be to maintain and develop our application.
+                           </p>
+                           
+                           <h6>Skills</h6>
+                           <ul style="text-align: left"  id="job_skills">
+                              
+                           </ul>
+                           
+                         <h6>job Details</h6>
+                         <table  class="details-table">
+                           <tr >
+                               <td  >Job Location </td>
+                               <td id="job_location">Riyadh</td>
+                           </tr>
+                           <tr>
+                               <td>Job Role </td>
+                               <td id="job_role">Information Technology</td>
+                           </tr>
+                           <tr>
+                               <td>Employment Type </td>
+                               <td id="job_type">Full Time </td>
+                           </tr>
+                           <tr>
+                               <td>Salary </td>
+                               <td id="salary">1000$ </td>
+                           </tr>
+                          <tr>
+                               <td>Num of vacancies </td>
+                               <td id="vacancies">1 </td>
+                           </tr>
+                         </table>   
+                           
+                     </div>
+               </div>     
+        
+</div>
     </div>
-    <div class="pag-div" >
+   
+        
+        
+</div>
+<div class="pag-div" >
         <ul class="pagination   justify-content-center">
           <li class="page-item"><a class="page-link circle-link pre"  href="#" >Previous</a></li>
           <li class="page-item  circle-item"><a class="page-link circle-link" href="#" >1</a></li>
@@ -150,10 +184,6 @@
           <li class="page-item circle-item   "><a  class="page-link circle-link nex" href="#">Next</a></li>
         </ul>
     </div> 
-        
-        
-</div>
- 
     
 </div>    
 <!-- end jobs section -->

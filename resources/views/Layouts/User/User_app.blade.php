@@ -34,6 +34,7 @@
 <script src="/User/js/jquery-3.4.1.js"></script>
  <script src="/User/js/popper.min.js"></script>
  <script src="/User/js/bootstrap.min.js"></script>   
+ <script src="/User/js/main.js"></script>  
 
       
 <script>

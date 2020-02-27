@@ -23,3 +23,7 @@ Route::get('/home', function () {
 Route::get('/index','User\Main_cont@index')->name('Home');
 Route::get('/jobs','User\Main_cont@findJobs')->name('Jobs');
 Route::post('/jobs','User\Main_cont@findJobs')->name('Jobs');
+
+Route::get('/job-details','User\Main_cont@jobDetails')->name('Jobs.details');
+
+Route::get('/job-filter','User\Main_cont@filterJobs')->name('Jobs.filter');
