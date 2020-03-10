@@ -12,7 +12,9 @@ body{
      
   }
    
-      
+  .logo{
+    height: 50px;
+}     
   /*---  Landing Page  --*/
   .landing {
     position: relative;
@@ -194,12 +196,12 @@ body{
   .footer input,textarea{
       display: block;
       margin-bottom: 10px;
-      padding: 10px 40px;
+      padding: 5px 60px;      
       color:  #8A8A8C;
   }
   .footer textarea{
-          padding: 10px 50px;
-             margin-bottom: 10px;
+    padding: 10px 70px;
+    margin-bottom: 10px;
   
   }
   .footer .no-padding {
@@ -207,9 +209,87 @@ body{
     
   }
   .footer button{
-        padding: 5px 100px;
-       margin-bottom: 0;
+    padding: 5px 125px;
+    margin-bottom: 0;
       background-color: #2784fc;
       border: none;
       color: #fff;
   }
+  /*sign sign up job post style*/
+  .nav-title{
+    width: 40%;
+     color:  #2784fc;
+     text-align: center;
+}
+.login-form{
+  border: 1px solid #DCDCDC;
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px 0px;
+}
+.login-form label{
+  color: #2784fc;
+}
+.login-form input{
+  width: 50%;
+  margin: 0px 25%;
+  text-align: center;
+}
+.login-form input[type="radio"] {
+      width:50%;
+      height: 20px;
+      margin: 0px 20px;;
+}
+.login-tab{
+  margin: 10px;
+    color: #fff;
+  border-radius: 20px;
+  padding:10px 30px;
+  width: 50%;
+  border: 1px solid  #DCDCDC;
+  color: #2784fc;
+}
+.forget-pass{
+margin-left: 40px;}
+.error {
+color: red;
+margin-left: 5px;
+}
+label.error {
+  display: inline;
+}
+/* error message for jquery validation */
+label.error{
+    color: red !important;
+    font-weight: normal !important;
+}
+
+.job-post{
+  background-color: #fff;
+  padding: 20px 0px;
+  text-align: center;
+  color: #2784fc;
+
+}
+.job-post h3{
+  margin-bottom: 30px;
+}
+.job-post label{
+  color: #2784fc;
+}
+.job-post input{
+text-align: center;}
+.post-btn{
+  width: 35%;
+  height: 50px;
+  font-size:20px!important;
+}
+.add-skills-btn{
+  background-color:  #2784fc;
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  width: 40px;
+  border-radius: 25px;
+  font-style: bold;
+}

@@ -1,3 +1,117 @@
+// check if the user is logged if not redirect it to the login page
+$(document).ready(function(){
+  $('#job_apply_btn').click(function(){
+     $.ajax({
+    type:'get',
+    url:'/check-login/',
+     success:function(resp){
+     if(resp=='false'){
+      window.location = "/login";
+     }
+    },error:function(){
+      alert('error');
+    }		
+   
+  });
+
+  });
+});
+
+$(document).ready(function(){
+    //validate the login form
+     $('#login_form').validate({
+        rules: {
+          email: {
+          required: true,
+          email: true,
+        },
+        password: {
+          required: true,
+          minlength: 8,
+        }
+      },
+      messages: {
+        email: 'Enter a valid email',
+        password: {
+          minlength: 'Password must be at least 8 characters long'
+        }
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+     }); 
+    
+    //validate the login form for employer
+    $(document).ready(function(){
+    //validate the login form
+     $('#company_login').validate({
+        rules: {
+          company_email: {
+          required: true,
+          email: true,
+        },
+        company_pass: {
+          required: true,
+          minlength: 8,
+        }
+      },
+      messages: {
+        company_email: 'Enter a valid email',
+        company_pass: {
+          minlength: 'Password must be at least 8 characters long'
+        }
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+     }); 
+    
+    /* candidate register validation */
+    $(document).ready(function(){
+      $('#register').validate({
+        rules: {
+          name: {
+          required: true,
+          },
+          email: {
+          required: true,
+          email: true,
+        },
+        pass: {
+          required: true,
+          minlength: 8,
+        },
+         confirm:{
+              required: true,
+          minlength: 8,
+          equalTo:"#pass"
+    
+        }
+      },
+      messages: {
+         name:{
+            required:'This field is required'
+                    },
+         email: 'Enter a valid email',
+        pass: {
+          minlength: 'Password must be at least 8 characters long'
+        },
+        confirm: {
+          minlength: 'Password must be at least 8 characters long',
+          equalTo:'password doesnot match'
+        }  
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+     });
+    
+    
+    
+
 
 var   // get the div that show the job info 
 job_details= document.getElementById('job_info'),
@@ -63,6 +177,15 @@ function hideInfo(){
     div.className = "col-md-8";   
 
 
+}
+
+add_skills.onclick = function(){
+  var new_input = document.createElement("input");
+   new_input.setAttribute("type","text");
+       new_input.setAttribute("style","margin-top:7px;");
+
+  new_input.className="form-control";
+ skills.appendChild(new_input);
 }
 
 
@@ -205,3 +328,5 @@ function findWithAttr(array, attr, value) {
     }
     return -1;
 }
+
+

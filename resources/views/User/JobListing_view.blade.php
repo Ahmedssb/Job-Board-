@@ -129,7 +129,39 @@
                             <button  class="div1-btn1" ><span onclick="hideInfo()" id="close_btn"  aria-hidden="true">×</span></button>
                              <h5 id="job_title">Web developer</h5>
                            <h6 id="job_company">Company name <span id="job_date">12/2019</span></h6>
-                           <button class="div1-btn2"  >Apply</button>
+                           <button class="div1-btn2"  data-toggle="modal" data-target="#jobApply" id="job_apply_btn">Apply</button>
+                           @auth
+                          <!-- start Modal -->
+                        <div class="modal fade" id="jobApply" role="dialog">
+                          <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content" >
+                              <div class="modal-header">
+                                <h5 class="" style="color: #2784fc">Apply To job</h5>
+                               <button type="button" class="close" style="color: #2784fc" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body modal-input-div">
+                                  <label>name *</label>
+                                 <input type="text" required>
+                                   <label>E-mail*</label>
+                                 <input type="email"  required>
+                                  <label>Phone</label>
+                                 <input type="phone"  required>
+                                  <label>CV *</label>
+                                  <input type="file" placeholder="Upload"   required>
+
+                              </div>
+                              <div class="modal-footer">
+                             <button type="submit" class="btn  btn-block" style="background-color: #2784fc;color:#fff"><span class="glyphicon glyphicon-off"></span> Apply</button>
+
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                         @endauth
+                       <!-- end modal -->
+
                       </div>   
                        <div class="details-div2" >
                          <h6>Job Description </h6>

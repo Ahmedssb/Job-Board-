@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/User/css/listing.css">
     <link rel="stylesheet" href="/User/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/User/images/jobStock.png" type="image/png" sizes="20x20">
 
     
 </head>
@@ -26,7 +27,13 @@
   
 </div> 
 <! --end home section --> 
-
+@if(Session::has('msg_err'))
+    <div class="alert alert-danger" role="alert" style="text-align: center;">
+                   <button type="button" class="close" data-dismiss="alert">x</button>
+                   <h4> <i class="fa fa-ban"></i>Failed!</h4>
+                    {{Session::get('msg_err')}}
+    </div>
+ @endif
 @yield('content')
 
 @include('Layouts.User.User_footer')
@@ -35,6 +42,7 @@
  <script src="/User/js/popper.min.js"></script>
  <script src="/User/js/bootstrap.min.js"></script>   
  <script src="/User/js/main.js"></script>  
+ <script src="/User/js/jquery.validate.min.js"></script>
 
       
 <script>

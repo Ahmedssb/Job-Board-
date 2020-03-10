@@ -25,5 +25,16 @@ Route::get('/jobs','User\Main_cont@findJobs')->name('Jobs');
 Route::post('/jobs','User\Main_cont@findJobs')->name('Jobs');
 
 Route::get('/job-details','User\Main_cont@jobDetails')->name('Jobs.details');
-
 Route::get('/job-filter','User\Main_cont@filterJobs')->name('Jobs.filter');
+
+Route::get('/login','User\User_cont@login')->name('Login');
+Route::post('/login','User\User_cont@login')->name('Login');
+Route::get('/register','User\User_cont@register')->name('Register');
+Route::post('/register','User\User_cont@register')->name('Register');
+Route::get('/logout','User\User_cont@logout')->name('Logout');
+
+Route::get('/postjob','User\Company\Main_cont@postJob')->name('PostJob')->middleware('EmployerLogin');
+
+Route::get('/check-login','User\User_cont@isLogged');
+
+
