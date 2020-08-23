@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', 'gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'q06sc0nw5xb17zzb'),
-            'username' => env('DB_USERNAME', 'f5p6izwayk8yjx4z	'),
+            'username' => env('DB_USERNAME', 'f5p6izwayk8yjx4z'),
             'password' => env('DB_PASSWORD', 'efop22t7b9b3vp76'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
