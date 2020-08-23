@@ -56,9 +56,9 @@
                    </form>
            </div>
         <!-- end candidate login form-->
-        <!-- start candidate login form--> 
+        <!-- start company login form--> 
            <div id="company" class="tab-pane container fade">
-                    <form class="login-form" method="post" action="#" id="company_login">      
+                    <form class="login-form" method="post" action="{{route('Login')}}" id="company_login">      
                       <div class="form-group ">
                             <label  >E-mail</label>
                             <input type="email" class="form-control  "  id="company_email" placeholder="company@gmail.com" name="company_email">
@@ -71,7 +71,7 @@
                       <input type="submit" class="btn btn-primary " value="Log In"> <a href="#" class="forget-pass">Forget Password</a>
                    </form>
            </div>
-        <!-- end candidate login form-->
+        <!-- end company login form-->
            
            
        </div>      

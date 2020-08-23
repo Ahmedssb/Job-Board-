@@ -1,7 +1,7 @@
 <! -- start nav -->
     <nav class="navbar navbar-expand-md  navbar-light   fixed-top justify-content-center custom-nav">
         <div class="container-fluid">
-        <a  class="navbar-brand  " href="index.html"><img src="/User/images/jobStock.png" class="logo"></a>
+        <a  class="navbar-brand  " href="{{route('Home')}}"><img src="/User/images/jobStock.png" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
                <span class="navbar-toggler-icon"></span>
             </button>

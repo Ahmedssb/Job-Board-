@@ -18,11 +18,12 @@ class Main_cont extends Controller
             $jobs = Job::latest()->limit(2)->get();
            $countries = Country::all();
            $categories = Category::all();
+           
            // send the jobs with their countries and category into the index view
            $arr['countries']= $countries;
            $arr['categories']= $categories;
            $arr['jobs']= $jobs;
-       
+           
         return view('User.Index_view',$arr);
     }
 

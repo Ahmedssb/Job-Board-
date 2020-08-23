@@ -17,11 +17,11 @@ class User_cont extends Controller
                 $user = Auth::user();
                  // direct the user based on his type 
                  if($user->type == 0){
-                 return redirect()->route('PostJob');
+                 return redirect()->route('Home');
                  }elseif($user->type == 1){
-
+                  return redirect()->route('PostJob');
                  }else{
-
+                 
                  }
                 // return redirect()->route('Home');
                 //Session::put('userSession',$data['email']);

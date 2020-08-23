@@ -287,6 +287,7 @@ $(document).ready(function(){
               job_data = data;
              job_listing.setAttribute("style"," display: none;"); 
               div.className = "col-md-8 ";   
+			  // replace job_listing by insertin new  div before job_info   
              job_container.insertBefore(div, job_info);
              // for each ajax request delete all div content and create it again
             var child = div.lastElementChild;  
