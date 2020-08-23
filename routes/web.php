@@ -14,7 +14,7 @@
 
 
 Route::get('/', function () {
-    return view('User.Index_view');
+    return redirect(route('Home'));
 });
 
 
